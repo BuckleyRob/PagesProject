@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour {
 		float moveHorizontal = Input.GetAxis("Horizontal");
 		float moveVertical = Input.GetAxis("Vertical");
 		Vector3 movement = new Vector3(moveHorizontal, 0f, moveVertical);
-		movement = Quaternion.Euler(0f,-45f,0f) * movement;
+		movement = Quaternion.Euler(0f,45f,0f) * movement;
 		rb.AddForce(movement * speed);
 	}
 	void OnTriggerEnter(Collider other) {
